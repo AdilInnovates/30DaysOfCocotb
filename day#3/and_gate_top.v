@@ -1,14 +1,4 @@
-// and_gate.v
-module and_gate(
-    input wire clk,
-    input wire a,
-    input wire b,
-    output reg y
-);
-    always @(posedge clk) begin
-        y <= a & b;
-    end
-endmodule
+
 
 // testbench.v
 module and_gate_top(
@@ -29,8 +19,8 @@ module and_gate_top(
 
     initial begin
         // Dump waveform data
-        $dumpfile("and_gate.vcd");
-        $dumpvars(0, and_gate_top);
+        $dumpfile ("and_gate.vcd");
+        $dumpvars (0, and_gate_top);
     end
 
 endmodule
